@@ -1,0 +1,17 @@
+.vn-map-container {
+  width: 100%;
+  height: 80%;
+  position: relative;
+}
+
+.vn-map-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  display: none;
+  z-index: 10;
+}

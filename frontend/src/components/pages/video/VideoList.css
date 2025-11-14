@@ -1,0 +1,34 @@
+/* Removed .container, .grid, .card as they are now handled inline in JSX */
+
+/* Pagination */
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #eee;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.video-list {
+  margin-bottom: 100px !important;
+}
+
+/* Removed .video-title styles as they are now handled inline in JSX */

@@ -1,0 +1,107 @@
+/* PostFormQuill.css - Styles for image resize functionality */
+
+.ql-editor {
+  min-height: 350px;
+}
+
+.quill {
+  width: calc(100% + 15px);
+}
+
+.ql-toolbar .ql-formats {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Image resize styles */
+.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.ql-editor img:hover {
+  opacity: 0.9;
+  border-color: #007bff;
+}
+
+.ql-editor img:active {
+  opacity: 0.8;
+}
+
+/* Resize handles */
+.ql-editor img[style*="resize"] {
+  resize: both;
+  overflow: hidden;
+}
+
+/* Image selection styling */
+.ql-editor img.ql-selected {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Resize toolbar */
+.ql-image-toolbar {
+  position: absolute;
+  background: #333;
+  border-radius: 4px;
+  padding: 4px;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.ql-image-toolbar button {
+  background: #555;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  margin: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.ql-image-toolbar button:hover {
+  background: #777;
+}
+
+/* Make images resizable by default */
+.ql-editor img {
+  resize: both;
+  overflow: hidden;
+  min-width: 50px;
+  min-height: 50px;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Responsive images */
+@media (max-width: 768px) {
+  .ql-editor img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Image resize indicators */
+.ql-editor img::after {
+  content: "🔄";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.ql-editor img:hover::after {
+  opacity: 1;
+}

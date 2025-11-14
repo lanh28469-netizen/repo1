@@ -1,0 +1,91 @@
+.container {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: left;
+  padding: 0 10px;
+}
+
+.card {
+  width: 160px;
+  height: 230px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #eee;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.footer-banner {
+  margin-top: 250px !important;
+}
